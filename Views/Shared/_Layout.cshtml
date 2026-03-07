@@ -73,6 +73,18 @@
             display: flex;
             animation: scroll 20s linear infinite;
         }
+
+        /* How it Works Styles */
+        .step-card-shadow {
+            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.05);
+        }
+        @@keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 4s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 min-h-screen font-sans transition-colors duration-300">
@@ -94,8 +106,8 @@
                 </div>
             </div>
             <div class="flex items-center space-x-6">
-                <a class="text-sm font-semibold hover:opacity-80" href="#">Login</a>
-                <a class="bg-gray-900 dark:bg-white dark:text-gray-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity" href="#">Sign up</a>
+                <a class="text-sm font-semibold hover:opacity-80" asp-controller="Home" asp-action="login">Login</a>
+                <a class="bg-gray-900 dark:bg-white dark:text-gray-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity" asp-controller="Home" asp-action="signup">Sign up</a>
                 <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                     <span class="material-icons-outlined block dark:hidden">dark_mode</span>
                     <span class="material-icons-outlined hidden dark:block">light_mode</span>

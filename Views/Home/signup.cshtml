@@ -1,0 +1,104 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sign Up Screen</title>
+    <!-- Tailwind CSS v3 CDN with plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Custom Tailwind Configuration for specific colors -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brand: {
+                  sage: '#8db493', // Sage green from the image
+                  dark: '#2d2d2d', // Dark text color
+                }
+              }
+            }
+          }
+        }
+    </script>
+    <style data-purpose="custom-shadow">
+        /* Adding a custom hard shadow to match the reference image style */
+        .custom-card-shadow {
+          box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-[#fdf7f2] min-h-screen flex items-center justify-center p-4">
+    <!-- BEGIN: Main Sign Up Container -->
+    <main class="w-full max-w-md" data-purpose="signup-container">
+        <!-- BEGIN: Card Surface -->
+        <section class="bg-white p-8 md:p-12 rounded-lg border border-gray-100 custom-card-shadow" data-purpose="signup-card">
+            <!-- BEGIN: Header Section -->
+            <header class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-4">Sign up</h1>
+                <p class="text-gray-600 text-sm md:text-base">Please fill your details to create an account</p>
+            </header>
+            <!-- END: Header Section -->
+            
+            <!-- BEGIN: Sign Up Form -->
+            <form action="#" class="space-y-6" method="POST">
+                <!-- Name Field Group -->
+                <div data-purpose="form-group-name">
+                    <label class="block text-sm font-medium text-brand-dark mb-2" for="name">Full Name</label>
+                    <div class="relative">
+                        <input class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-brand-sage focus:border-brand-sage transition-colors" id="name" name="name" placeholder="" required="" type="text"/>
+                        <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Field Group -->
+                <div data-purpose="form-group-email">
+                    <label class="block text-sm font-medium text-brand-dark mb-2" for="email">Email</label>
+                    <div class="relative">
+                        <input class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-brand-sage focus:border-brand-sage transition-colors" id="email" name="email" placeholder="" required="" type="email"/>
+                        <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Password Field Group -->
+                <div data-purpose="form-group-password">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="block text-sm font-medium text-brand-dark" for="password">Password</label>
+                    </div>
+                    <input class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-brand-sage focus:border-brand-sage transition-colors" id="password" name="password" placeholder="" required="" type="password"/>
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button class="w-full bg-brand-sage hover:bg-opacity-90 text-white font-medium py-3.5 rounded-xl transition-all shadow-sm active:scale-[0.98]" type="submit">
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+            <!-- END: Sign Up Form -->
+            
+            <!-- BEGIN: Footer Section -->
+            <footer class="mt-8 text-center">
+                <p class="text-sm text-brand-dark">
+                    Already have an account? 
+                    <a class="font-semibold underline underline-offset-4 hover:text-gray-700" asp-controller="Home" asp-action="login">Log in</a>
+                </p>
+            </footer>
+            <!-- END: Footer Section -->
+        </section>
+        <!-- END: Card Surface -->
+    </main>
+    <!-- END: Main Sign Up Container -->
+</body>
+</html>

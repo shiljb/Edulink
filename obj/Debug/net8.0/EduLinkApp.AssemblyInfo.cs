@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduLinkApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8acd3a5190a33f168eed9f02db0a1a8f1dd9a667")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c66b0c650b65376dac127d0703b76604749099d")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduLinkApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduLinkApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
