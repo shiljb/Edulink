@@ -45,8 +45,15 @@
             </header>
             <!-- END: Header Section -->
             
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                    <span class="block sm:inline">@ViewBag.ErrorMessage</span>
+                </div>
+            }
+            
             <!-- BEGIN: Login Form -->
-            <form action="#" class="space-y-6" method="POST">
+            <form asp-controller="Home" asp-action="login" class="space-y-6" method="POST">
                 <!-- Email Field Group -->
                 <div data-purpose="form-group-email">
                     <label class="block text-sm font-medium text-brand-dark mb-2" for="email">Email</label>
