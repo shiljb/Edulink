@@ -1,0 +1,11 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+C:\Programming Hero 2\My Website\EduLink\Views\Shared\_Layout.cshtml(68,10): error CS0103: The name 'keyframes' does not exist in the current context [C:\Programming Hero 2\My Website\EduLink\EduLinkApp.csproj]
+
+Build FAILED.
+
+C:\Programming Hero 2\My Website\EduLink\Views\Shared\_Layout.cshtml(68,10): error CS0103: The name 'keyframes' does not exist in the current context [C:\Programming Hero 2\My Website\EduLink\EduLinkApp.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.96

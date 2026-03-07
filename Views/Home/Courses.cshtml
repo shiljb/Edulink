@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<div class="max-w-7xl mx-auto px-6 py-12">
+    <!-- Categories Section -->
+    <section class="py-12 flex flex-col lg:flex-row gap-12 items-start">
+        <div class="lg:w-1/3 space-y-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight font-body">
+                Explore course categories
+            </h2>
+            <div class="flex gap-4">
+                <button class="w-14 h-14 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all active:scale-95">
+                    <span class="material-symbols-rounded">chevron_left</span>
+                </button>
+                <button class="w-14 h-14 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all active:scale-95">
+                    <span class="material-symbols-rounded">chevron_right</span>
+                </button>
+            </div>
+        </div>
+        <div class="lg:w-2/3 w-full overflow-x-auto hide-scrollbar flex gap-6 pb-6">
+            <div class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-[#FBE4D1] dark:bg-orange-900/30 p-8 rounded-[2rem] flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                    <span class="material-symbols-rounded text-gray-900 dark:text-orange-200">hub</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-orange-100">IT & Software</h3>
+            </div>
+            <div class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-[#FFF1AD] dark:bg-yellow-900/30 p-8 rounded-[2rem] flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                    <span class="material-symbols-rounded text-gray-900 dark:text-yellow-200">psychology</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-yellow-100">Personal development</h3>
+            </div>
+            <div class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-[#C9DBCF] dark:bg-emerald-900/30 p-8 rounded-[2rem] flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                    <span class="material-symbols-rounded text-gray-900 dark:text-emerald-200">handshake</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-emerald-100">Business</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Section -->
+    <div class="mt-24">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white font-body">
+                Browse our courses
+            </h1>
+            <button class="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all flex items-center gap-2">
+                View all courses
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course Card 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-200 dark:border-gray-700">
+                <div class="h-56 bg-[#E1F2E8] dark:bg-emerald-900/30 p-6 relative flex items-center justify-center">
+                    <img alt="Graphic design illustration" class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC-o-X1Z94SIfqkzCzEVRABdzljpAapSZzfdXZ3xOaJ8Juuoxqh9_1mkagxh7Y9P4FJ3d2N42us4hxVgT1jjIQLaqpve7BIC_3SvJqixGY7GP74a3CT4zj1d121zEp710S1KUoBVprkTtdZEM2biSsvfYitePx2TLqejRTDDPq_FlUyQTqPeFiL9ji0Z-XNHPZJb1p2y7yrE8nqz3wX04PX8pUCpMndvcPXm978PBPjLdj3VgOQYxMb4QnUZCdxAmh89lkx-BHPhFK" />
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-gray-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
+                        <img alt="Billy Vasquez" class="w-7 h-7 rounded-full border border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ygrwi1LKAurBNoJjfX9zz6EZ1pPO40_OHn1bDcF7K0n7SlwJmb2SLV9p5gmBQdeBMXjf5vkAee2_iapLvUkHK6837pkUVIBmMwNioq7aPiArvxOKn14jChKsXSftWxtdYObAknHgnwg4H_L9-BvpUBoe2CyNU69FGgtj1TEbbTI7rCfJqqVNcOYHx1VQX_QiYclKryPEHDuJxT6EMcaYVyzTZkIsYaoFt6j77BfIfOQ_pPTGOn_366Q6SmpwZ0wtN0i5-I6PTe0f" />
+                        <span class="text-xs font-semibold">Billy Vasquez</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Graphic Design Masterclass</h3>
+                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-6">
+                        <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">video_library</span> 140 Sections</span>
+                        <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 90 Days</span>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xl font-bold text-primary">$450.00 USD</span>
+                    </div>
+                </div>
+            </div>
+            <!-- More cards could go here -->
+        </div>
+    </div>
+</div>
