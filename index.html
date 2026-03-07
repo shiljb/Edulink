@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink - Find the Best Mentors</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#4B7E67",
+                        "background-light": "#FDF8F1",
+                        "background-dark": "#121212",
+                        "accent-peach": "#FFE4D6",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .hero-image-clip {
+            border-radius: 40px 40px 40px 40px;
+        }
+
+        .pill-avatar-group {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            vertical-align: middle;
+            margin: 0 8px;
+        }
+
+        .dark .pill-avatar-group {
+            background: #222;
+            border-color: #333;
+        }
+
+        .bg-green-accent {
+            background-color: #E2EDE3;
+        }
+
+        .dark .bg-green-accent {
+            background-color: #1a2e21;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 min-h-screen font-sans">
+    <header class="relative z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+            <div class="flex items-center space-x-12">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="bg-primary text-white w-8 h-8 flex items-center justify-center font-bold text-xl rounded">
+                        E</div>
+                    <span class="text-2xl font-bold tracking-tight text-gray-800 dark:text-white">duLink</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a class="text-primary" href="#">Home</a>
+                    <a class="hover:text-primary transition-colors" href="#">Courses</a>
+                    <a class="flex items-center gap-1 hover:text-primary transition-colors" href="#">
+                        Pages <span class="material-icons-outlined text-sm">expand_more</span>
+                    </a>
+                    <a class="hover:text-primary transition-colors" href="#">Event</a>
+                    <a class="hover:text-primary transition-colors" href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a class="text-sm font-semibold hover:opacity-80" href="#">Login</a>
+                <a class="bg-gray-900 dark:bg-white dark:text-gray-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+                    href="#">Sign up</a>
+            </div>
+        </nav>
+    </header>
+    <main class="relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-[500px] bg-green-accent -z-10 rounded-bl-[100px] hidden lg:block">
+            <div class="absolute bottom-10 left-10 opacity-30 text-primary grid grid-cols-4 gap-4">
+                <span class="material-icons-outlined text-xs">add</span>
+                <span class="material-icons-outlined text-xs">add</span>
+                <span class="material-icons-outlined text-xs">add</span>
+                <span class="material-icons-outlined text-xs">add</span>
+                <span class="material-icons-outlined text-xs">add</span>
+                <span class="material-icons-outlined text-xs">add</span>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-12 pb-24 lg:flex items-center gap-12">
+            <div class="lg:w-1/2 space-y-8">
+                <div
+                    class="inline-flex items-center px-4 py-1.5 rounded-full bg-accent-peach text-gray-800 text-sm font-medium border border-[#F5D5C5]">
+                    <span class="mr-2">*</span> Get started with Edulink <span class="ml-2">*</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-[1.1]">
+                    Find suitable courses from the best
+                    <span class="pill-avatar-group">
+                        <img alt="Mentor avatar" class="w-8 h-8 rounded-full border-2 border-white"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1WvcF3JzUHJ-N3XdCCwIcT-Tsd4Oyq1slnfFTOGSqiBHaAbXzq8NJovrH31zqtsyT6tJw56p2uGexq6IBrVcUBCGXCeb3RkgS9GanADd40RSrpHEfDLeDk5TeyJHfCQWbJZ_83AwyLJMAVPdDdwnqMQDlOTWsMyDtGWwd3GI77AvmyKnnaZfCGFGoJwevXdHuC3yn8JkXR157KXTf4QX_XvCMnZ_N-VZVEzMeDQD70oni72eyejPiW1jnQk80qLyBfOlZWKBoN36K" />
+                        <img alt="Mentor avatar" class="w-8 h-8 rounded-full border-2 border-white -ml-3"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7636V1UXJDdc8HXg3P4zCbsQ-Iw7HhsC0WvPV_WRhIp2jLwq2Cln3ppfxUwOu1p2I46zDGlPMlOMK2w6YGVVZN2xo0JH-CD3AnH3noiu4GKlCSkMzZeC2ZQLT7H4EXT4kMJl8o6Ab-tQE0avfwM9nreJY_sh6j1qs1sTgJJhM7wykttWriJKbmBnkKQ9MvDF-ixI3EPqKRyoncWbRjaVAsGWalsVfYsbmd0lcwgCwq7-4MIp2aTmABnbCrk6GynWOmhNZOs3kj-ug" />
+                        <span class="material-icons-outlined ml-2 text-gray-400">double_arrow</span>
+                    </span>
+                    mentors
+                </h1>
+                <p class="text-gray-500 dark:text-gray-400 text-lg max-w-lg leading-relaxed">
+                    The good gathering doesn't bearing day stars over open behold may male tree replenish don't blessed
+                    beast days earth fifth let multiply and he every blessed.
+                </p>
+                <div class="flex flex-wrap items-center gap-6 pt-4">
+                    <button
+                        class="bg-gray-900 dark:bg-white dark:text-gray-900 text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform">
+                        Start Learning
+                    </button>
+                    <a class="flex items-center gap-3 font-semibold group" href="#">
+                        Watch Video
+                        <div
+                            class="w-10 h-10 border border-gray-300 dark:border-gray-600 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all">
+                            <span class="material-icons-outlined">east</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-16 lg:mt-0 relative">
+                <div class="absolute -top-12 left-0 w-32 h-32 rounded-2xl overflow-hidden blur-[2px] opacity-60">
+                    <img alt="Mentor portrait blurred" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh12tnsMY6PE-pYAYYligwH5TikTL16MOUXBcL9Qbp43-0FeTbi-8WtC-JrRdiXiI-fmzI4GKt_4AtXuDrC3A-XVzmFYJNgcQ5h0yCM0JFDIo5qdf9xXhCaNcl4CDFJBKzVHXrJb6PHE0HdJEbOATcObPEJqomuSb35494AfzgyTycS5kbqDgakwi9p7n3g4OeiTO5VQbEvLg7GhA-LVAELdu2gopKic98Z1LWQJ2pdnI4fFwBkkm_t1SsipF3yGxmP6mTnwij7Ztx" />
+                </div>
+                <div class="relative z-10 mx-auto lg:ml-auto w-full max-w-[500px]">
+                    <div
+                        class="hero-image-clip overflow-hidden border-[12px] border-white dark:border-gray-800 shadow-2xl">
+                        <img alt="Smiling female mentor with glasses" class="w-full h-[550px] object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG6n0ZuLykXzL2eIgROEgYTZ6KR-4NcHJH_PVr40D6Ya9GM_1TmdNLFoflzJXrvLGWr8so21gkUifT9SSxGtoK_1tw1WpBnIuCy-Of4FLO34fTyMLHFSg2drAHJpZjvetn-zbI_Y0777JNNxWZx58kR-JIebSUjJEoSPC9lVL8ay19KiJI6rNNHedrr3FBCBjRTDr9r0CYZtl7_WpE92BnXWo57kY4zn_orSvcjdXhg2wv1XEryyCM-xSibjNC6iBZIex9SFK8g-I6" />
+                    </div>
+                    <div
+                        class="absolute -bottom-8 -left-12 bg-accent-peach dark:bg-gray-800 p-5 rounded-2xl shadow-xl border-b-4 border-pink-200 dark:border-pink-900 min-w-[220px]">
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-3">UI Design Pattern</h4>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 overflow-hidden">
+                                <img alt="Dennis Barrett" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlJUdus-8egHm6pC14AXqY85F6Lemr5lFRdcxC1POAAsMMqcT-IFu30NxmZ3IMr3v0pPv_uB2ksJOQ4AiU_EzAO6uO1ZrF5ZwU_NRLGQr6113yCg22_YoHfB4N5yOlFJtDRaty7FiwdtprrSjPnyvth623XnkByT-7Qa8Z5KPC4Tln9fUXFDRTWXcivUZgT1WvgQA1nifi79uc1oz2Y45sxsGBP-8RxmUbP-gw2vS5kiIM46PCBsE8yXVD4unaOc07LwKujXmHt6u" />
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800 dark:text-gray-200">Dennis Barrett</p>
+                                <p class="text-[10px] text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                                    <span class="material-icons-outlined text-[10px]">description</span> 123 Courses
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-4 -right-8 w-36 h-48 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-700 shadow-lg hidden sm:block">
+                        <img alt="Mentor portrait" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5umrowDjYyBWyRojj2vcHH4pdZIyEpBieaqqrDZ-byU6yTCWJBV2qLzJAJ5Bfdnpm1byVzPS6Zyz7v18oagMGmpQQGrUVzu6-BCaXdZ61Mx-H1O6mILs2oHF2TywwrYuWHFouTzOelhN6h7-BuHm_7k6vilsfeXj5Fse_GapAjPvKXYG5yXj1w2Z2omM0zSC1O8klICijBB2eByiRjX_Dv87uPJfAqRetkIEnTNXevB6P0Pqq8MuyrZXuFIiNq1maB7XjdmHUwHX9" />
+                        <div class="absolute inset-0 bg-black/10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink Course Categories</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1A1A1A",
+                        "background-light": "#FDF8F1",
+                        "background-dark": "#121212",
+                        "card-peach": "#FBE4D1",
+                        "card-yellow": "#FFF1AD",
+                        "card-green": "#C9DBCF",
+                        "card-blue": "#E0E7FF",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.5rem",
+                        "card": "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <section class="py-10 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale dark:invert">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-rounded text-3xl">tonality</span>
+                    <span class="font-bold text-xl tracking-tight">Artistry</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-rounded text-3xl">grid_view</span>
+                    <span class="font-bold text-xl tracking-tight">Dexign</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-rounded text-3xl">bar_chart</span>
+                    <span class="font-bold text-xl tracking-tight">Emblem</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-rounded text-3xl">polyline</span>
+                    <span class="font-bold text-xl tracking-tight">Grapherz</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-rounded text-3xl">waves</span>
+                    <span class="font-bold text-xl tracking-tight">Grapho</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 md:py-20 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
+            <div class="lg:w-1/3 space-y-8">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white leading-tight">
+                    Explore course categories
+                </h2>
+                <div class="flex gap-4">
+                    <button
+                        class="w-14 h-14 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-white dark:hover:bg-slate-800 transition-all active:scale-95">
+                        <span class="material-symbols-rounded">chevron_left</span>
+                    </button>
+                    <button
+                        class="w-14 h-14 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-white dark:hover:bg-slate-800 transition-all active:scale-95">
+                        <span class="material-symbols-rounded">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <div class="lg:w-2/3 w-full overflow-x-auto hide-scrollbar flex gap-6 pb-6">
+                <div
+                    class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-card-peach dark:bg-orange-900/30 p-8 rounded-card flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                        <span class="material-symbols-rounded text-primary dark:text-orange-200">hub</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-orange-100">IT &amp; Software</h3>
+                </div>
+                <div
+                    class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-card-yellow dark:bg-yellow-900/30 p-8 rounded-card flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                        <span class="material-symbols-rounded text-primary dark:text-yellow-200">psychology</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-yellow-100">Personal development</h3>
+                </div>
+                <div
+                    class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-card-green dark:bg-emerald-900/30 p-8 rounded-card flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                        <span class="material-symbols-rounded text-primary dark:text-emerald-200">handshake</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-emerald-100">Business</h3>
+                </div>
+                <div
+                    class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-card-blue dark:bg-blue-900/30 p-8 rounded-card flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                        <span class="material-symbols-rounded text-primary dark:text-blue-200">campaign</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-blue-100">Digital marketing</h3>
+                </div>
+                <div
+                    class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-rose-100 dark:bg-rose-900/30 p-8 rounded-card flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
+                        <span class="material-symbols-rounded text-primary dark:text-rose-200">draw</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-rose-100">Creative Design</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fixed bottom-6 right-6">
+        <button
+            class="w-12 h-12 bg-primary dark:bg-slate-100 text-white dark:text-primary rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-symbols-rounded text-xl dark:hidden">dark_mode</span>
+            <span class="material-symbols-rounded text-xl hidden dark:block">light_mode</span>
+        </button>
+    </div>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink Demo and Stats</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8BAA8B", // Sage green from the design
+                        "background-light": "#FDF8F1", // Soft cream
+                        "background-dark": "#121212",
+                        "sage-muted": "#C1D3C1",
+                        "sage-dark": "#2D3A2D",
+                        "accent-pink": "#F8B4B4",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .scribble-arrow {
+            position: absolute;
+            left: -10px;
+            bottom: 40px;
+            width: 40px;
+            height: 40px;
+            opacity: 0.6;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+    <section class="pt-12 pb-24 px-6 text-center relative overflow-hidden">
+        <div class="max-w-xl mx-auto mb-10">
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">
+                Watch our demo video
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed px-4">
+                Which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and
+                easy to distinguish.
+            </p>
+        </div>
+        <div class="relative max-w-md mx-auto z-10">
+            <div class="absolute -right-4 -top-6 w-12 h-12 pointer-events-none opacity-60">
+                <svg class="w-full h-full fill-slate-800 dark:fill-slate-200" viewBox="0 0 100 100">
+                    <circle cx="20" cy="20" r="5"></circle>
+                    <circle cx="50" cy="15" r="5"></circle>
+                    <circle cx="80" cy="25" r="5"></circle>
+                    <circle cx="35" cy="45" r="5"></circle>
+                    <circle cx="65" cy="55" r="5"></circle>
+                    <circle cx="90" cy="65" r="5"></circle>
+                </svg>
+            </div>
+            <div
+                class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 relative group aspect-video">
+                <img alt="Student with headphones using a laptop" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaMXz0DosujiM8_sNVnAmKgJnrGKDMlRcQjfaLlR9luJ3yw5j5ijcDL-u4XqTxKgu4YR38MimIpww66zL4oBOgNpSm228WUPGJDZbT6Gv3tBJGLo9sBxhHtR3qtHttF2FfjFl7GYAGUcbIdSqofbjyXFIGiP4_CX39w3rU1TKo63xvgnzk0CI1Tn5AdZ3EaZUbthq3yqI9EeVW0roEIUEwlA4TJiKE1Rcwsx3a30sKjwPjZEN5It7AFd8X3hYZxWfOtmTbN_cDLNbG" />
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button
+                        class="w-14 h-14 bg-accent-pink rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-rounded text-white text-3xl">play_arrow</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-sage-muted dark:bg-sage-dark pt-32 pb-16 px-6 -mt-20 relative">
+        <div class="max-w-md mx-auto">
+            <div class="absolute left-4 top-24 w-12 h-12 text-blue-400 transform -rotate-12 opacity-80">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+            </div>
+            <div class="space-y-12">
+                <div class="space-y-6">
+                    <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white leading-tight">
+                        Trusted by the 20,000+ happy students and online users sins 2024
+                    </h1>
+                    <button
+                        class="bg-primary/80 hover:bg-primary text-white font-semibold py-3 px-8 rounded-xl transition-colors shadow-md text-sm">
+                        Join our community
+                    </button>
+                </div>
+                <div class="grid grid-cols-2 gap-8 items-start">
+                    <div>
+                        <div
+                            class="text-5xl font-extrabold text-slate-900 dark:text-white border-b-4 border-slate-900/10 dark:border-white/10 pb-2 inline-block">
+                            10K
+                        </div>
+                        <div class="flex gap-0.5 my-2">
+                            <span class="material-symbols-rounded text-accent-pink text-xs fill-1">favorite</span>
+                            <span class="material-symbols-rounded text-accent-pink text-xs fill-1">favorite</span>
+                            <span class="material-symbols-rounded text-accent-pink text-xs fill-1">favorite</span>
+                            <span class="material-symbols-rounded text-accent-pink text-xs fill-1">favorite</span>
+                            <span class="material-symbols-rounded text-accent-pink text-xs fill-1">favorite</span>
+                        </div>
+                        <p
+                            class="text-[10px] text-slate-700 dark:text-slate-300 uppercase tracking-wider font-semibold">
+                            world wide students love us
+                        </p>
+                    </div>
+                    <div>
+                        <div
+                            class="text-5xl font-extrabold text-slate-900 dark:text-white border-b-4 border-slate-900/10 dark:border-white/10 pb-2 inline-block">
+                            4.7
+                        </div>
+                        <div class="flex gap-0.5 my-2">
+                            <span class="material-symbols-rounded text-orange-400 text-xs fill-1">star</span>
+                            <span class="material-symbols-rounded text-orange-400 text-xs fill-1">star</span>
+                            <span class="material-symbols-rounded text-orange-400 text-xs fill-1">star</span>
+                            <span class="material-symbols-rounded text-orange-400 text-xs fill-1">star</span>
+                            <span class="material-symbols-rounded text-orange-400 text-xs fill-1">star_half</span>
+                        </div>
+                        <p
+                            class="text-[10px] text-slate-700 dark:text-slate-300 uppercase tracking-wider font-semibold">
+                            1456 user review by Google
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/90 dark:bg-white/10 backdrop-blur-sm p-4 rounded-2xl flex items-center gap-3 shadow-lg max-w-xs ml-auto transform translate-y-4">
+                    <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border-2 border-white">
+                        <img alt="User Avatar" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF1j4MH78zm31EZzI10Df68413Tyi0qL6ht-QORUvQ7CroXj1CHbtX4Rv-Z-RcND2x7MFPYJQdNJpVxhGrYZF3gIAW8uk83dvxTxf8SyXf2lz8zazLGvVcAWn__Xz7qehDFJjyCtkXTtaeZH6jMF7ofBKCwoWGfA78O7VeLmEQk5k4JU3g0BUBfIH9gWlqp6pqQcPQ0DzwNIufFVnb7xg4cquvDiUROQgY5w-1jWrvEwhJV0XPrj7xd_7rHKP_Ev6rp2FlFSxRvQ3Q" />
+                    </div>
+                    <p class="text-[11px] font-medium text-slate-800 dark:text-slate-100 italic">
+                        "All courses are help people to achieve their goals"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fixed bottom-6 right-6 z-50">
+        <button
+            class="w-12 h-12 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center shadow-xl"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-symbols-rounded">dark_mode</span>
+        </button>
+    </div>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink Course Grid</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#10b981",
+                        "background-light": "#FDF8F1",
+                        "background-dark": "#0f172a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-size: 18px;
+            vertical-align: middle;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                Browse our courses
+            </h1>
+            <button
+                class="bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all flex items-center gap-2">
+                View all courses
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+                class="bg-card-light dark:bg-card-dark rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-slate-200/50 dark:border-slate-700/50">
+                <div class="h-56 bg-[#E1F2E8] dark:bg-emerald-900/30 p-6 relative flex items-center justify-center">
+                    <img alt="Graphic design illustration"
+                        class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC-o-X1Z94SIfqkzCzEVRABdzljpAapSZzfdXZ3xOaJ8Juuoxqh9_1mkagxh7Y9P4FJ3d2N42us4hxVgT1jjIQLaqpve7BIC_3SvJqixGY7GP74a3CT4zj1d121zEp710S1KUoBVprkTtdZEM2biSsvfYitePx2TLqejRTDDPq_FlUyQTqPeFiL9ji0Z-XNHPZJb1p2y7yrE8nqz3wX04PX8pUCpMndvcPXm978PBPjLdj3VgOQYxMb4QnUZCdxAmh89lkx-BHPhFK" />
+                    <div
+                        class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-slate-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
+                        <img alt="Billy Vasquez" class="w-7 h-7 rounded-full border border-white"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ygrwi1LKAurBNoJjfX9zz6EZ1pPO40_OHn1bDcF7K0n7SlwJmb2SLV9p5gmBQdeBMXjf5vkAee2_iapLvUkHK6837pkUVIBmMwNioq7aPiArvxOKn14jChKsXSftWxtdYObAknHgnwg4H_L9-BvpUBoe2CyNU69FGgtj1TEbbTI7rCfJqqVNcOYHx1VQX_QiYclKryPEHDuJxT6EMcaYVyzTZkIsYaoFt6j77BfIfOQ_pPTGOn_366Q6SmpwZ0wtN0i5-I6PTe0f" />
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Billy Vasquez</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">Graphic
+                        Design Masterclass</h3>
+                    <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">video_library</span> 140 Sections</span>
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">schedule</span> 90 Days</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-primary">$450.00 USD</span>
+                            <span class="text-sm text-slate-400 line-through">$450.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-card-light dark:bg-card-dark rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-slate-200/50 dark:border-slate-700/50">
+                <div class="h-56 bg-[#FBE3A4] dark:bg-amber-900/30 p-6 relative flex items-center justify-center">
+                    <img alt="Sketch app illustration"
+                        class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHqAJZ7dw2rHJdNWCG2b89kZ49bCHMVLln8yUFY2KmhZw8GBUFsBiEf2TipPEaSB2_B-HuTYHimcToiUbf2n9yj0umdMxas3k0ebnFSnjMH-h6ItMwE7gtZM-BzMjbvdebNNDyXzoi8UsJhsxj8AMSM405eSqeHuSAo39w6-xxBAG1tw05DAL6jPvlQawnS7s-7UkhlWYYdbczzMBIJ2EjU4i4c--M6D-9XKw9xcBg8Bd_24aIdWcnHWcNTLKOXIoAXjy7xzYOnwEu" />
+                    <div
+                        class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-slate-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
+                        <img alt="Dennis Barrett" class="w-7 h-7 rounded-full border border-white"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlieyhpe0jzRBQw_ww6TbSIYUpDt0iVQ2iDIZ5FLC4XyjN4wLNO-E7RAyOQuIOrBqTMUU8QJqTaeQy-TmSliuJRY8UiTYEJaJHSsN1TyP9VARUbaIPHxXPMmvfn3WSTXeJ_Qb2mRCBcD__YKWujILuL-maPLL_ysbgjMT92Gl1kG2jr1j4H67tt7b4gOpmJeaigeXN73iltBu_mh1tIKxu-OUHInP_44DgjhvSzF0azAAS6wUuDarsQmCLy3LCH5knZxVTqWQ5tZ4Z" />
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Dennis Barrett</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">Sketch
+                        From A to Z: For App Designer</h3>
+                    <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">video_library</span> 80 Sections</span>
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">schedule</span> 40 Days</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-primary">$750.00 USD</span>
+                            <span class="text-sm text-slate-400 line-through">$750.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-card-light dark:bg-card-dark rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-slate-200/50 dark:border-slate-700/50">
+                <div class="h-56 bg-[#FFD6D6] dark:bg-rose-900/30 p-6 relative flex items-center justify-center">
+                    <img alt="Python development illustration"
+                        class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHBBLUiSc6iQI0mFeZU0L7mVNQs4P37yrmJ9V6y55roiTNxHo-D2gNRRdkmKZmvvG_jUmfxZSUWlhAEyJknaXeOYP1-t4yqvO7bTcIF6t3rVIcD6SocEe7vKYSKqNtdqDwjGQT9K-71Cgg9iMsScRdOgYpClJvRX-2YRDC6bqoLZbZVAzl4b2smwD8TjHDNw56hrYEtiNcvsjkFt_AWA55qEKJPWEY_ohC-McYk9UUchp6S0xxmuLPPo7F2Sr9ujyCDZrZxiZCHhoH" />
+                    <div
+                        class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-slate-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
+                        <img alt="Jacqueline Miller" class="w-7 h-7 rounded-full border border-white"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvhZq14E2trFxfHZdvwftmsSN-pXh7Vj9k3gj3Iv8xicqJN8VZgats7qLTXKBEfB6pNSZl78TiqVQaf90DgGOdfedzB_6CPRzXtRlsRz09t5ERzK3XYxBN-w9XQkyj8D2HmBvP9WUjLM9uwjOTSlnnqzZ2i-KIIZgG0vE81V_9AsuOkURMhxqDc6rMVFTrR8DgRxFXQtaFGTIMC6K7adZET3aGsvXKKjbCCviuK3jM7gT1bHAFmjSgNT8UPb-Kb8n8UnOKkyCptsLP" />
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Jacqueline Miller</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">The
+                        Complete Web Development in Python</h3>
+                    <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">video_library</span> 100 Sections</span>
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">schedule</span> 50 Days</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-primary">$450.00 USD</span>
+                            <span class="text-sm text-slate-400 line-through">$450.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-card-light dark:bg-card-dark rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-slate-200/50 dark:border-slate-700/50">
+                <div class="h-56 bg-[#A7B6E4] dark:bg-indigo-900/30 p-6 relative flex items-center justify-center">
+                    <img alt="Bootstrap 5 illustration"
+                        class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ6xAseWtJIfukgJJ9A-r3OL7wfYkh1rK3yXwAFa0MhBZNwaSSIRjRnE_7Et4__gI5SHDbgr_YNwftZK3bHY-mQZl7vk6axI6ALdhqZA1v0krQpeb3uGvathUukUrWjCegdeHtHSjJnmc0mwoEA65yCV6UYnaUeYBx-OhtJvZytu04k9B1gxWrQfxEg_A2aAOQsa9QP0qKrBIRfRJhftwRwUdzq7D33Koy7fKGu52aqDPFhJwuHGlyYwDrbl1BD2eeWdT9WoBKnuUR" />
+                    <div
+                        class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-slate-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
+                        <img alt="Joan Wallace" class="w-7 h-7 rounded-full border border-white"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRl_JVCr2RYDHnknzNEWjDjCpR3jy5LFpQ1VGmv1Xo14O_b4HiiZFwrOGp615HqSWmbeMvofRyUzcXFRIbuqjx-MCKRH3Vg-Ww94wSQjYZfMS3ZuefjczPmiwK6a_BIsUaHmwAtHv0ckzZ-n6vWGwFjyus2sMnyecQPq8dniACD1zB5C4Ibk84qsc2VEdQsazIfwZdfAGiznguyVy-fn_NeTXyPYlBF5IuLK9G1sASvXAUmF_xv8hTHYAszlcj4BAaxFWXUzdqkNJp" />
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Joan Wallace</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">
+                        Bootstrap 5 From Scratch</h3>
+                    <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">video_library</span> 150 Sections</span>
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">schedule</span> 5 Days</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-primary">$230.00 USD</span>
+                            <span class="text-sm text-slate-400 line-through">$230.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-card-light dark:bg-card-dark rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-slate-200/50 dark:border-slate-700/50">
+                <div class="h-56 bg-[#CFD6FF] dark:bg-blue-900/30 p-6 relative flex items-center justify-center">
+                    <img alt="Figma to Webflow course illustration"
+                        class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoxbY_fVzLo2q391i1a_Jz-vxfDV4Vri-UTW-kbJu0fzV6NtbfLiZB9W-k4ArmBv--4a2HQtcLY3TKU_mkLvWm8uSqUznlYGqagQLxavr5qcXh2PWwI4jG_dFDepVmp5gveVC7Obe_Ufg4cM171DZfcbg3zM3w_l0DEHaryqGPMpGEAum5Gip31KfOfYxsWL8IYlLiclLPlFmyXSK2WsONyCg-6ETcIC-MyzeTvrH6Ukoy3pKzAiuoogsDcu6H0uinlhlxWh35rrOw" />
+                    <div
+                        class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-slate-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
+                        <img alt="Judy Nguyen" class="w-7 h-7 rounded-full border border-white"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2MkYFp12umpcKy34YNWRhINwJoQ-sSLZI1gsVs64YGxcEhRkWlWjuKAKlMnrgs8_EKklb9WaMqnSg15EDBy3ylne0U3P1VZUavhYgvIMhjQ7M5vWeKiGjz9oaxAGNT-fgScD6Jy9rpZhQHIzO_FdDFS6iovJ6eJ2ouZb5VQJ0_sSkybAsovxNdBs68fw4UBKlNXF8yiTcHfvkwqcoEvwLOAi9vFje7Tu_sW5gPsqznucO3l0x1IMYCsSp_0FFi30ubSiVRbpBOWqr" />
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Judy Nguyen</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">Figma to
+                        Webflow: Full course</h3>
+                    <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">video_library</span> 150 Sections</span>
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">schedule</span> 5 Days</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-primary">$800.00 USD</span>
+                            <span class="text-sm text-slate-400 line-through">$800.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-card-light dark:bg-card-dark rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-slate-200/50 dark:border-slate-700/50">
+                <div class="h-56 bg-[#FFCADB] dark:bg-pink-900/30 p-6 relative flex items-center justify-center">
+                    <img alt="CMS Website illustration"
+                        class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJBiJossvryKh_q9Ek-D_bmRUSy7fQbfUhxZwZDQLG2hx5iVwwqabgmguiYffoBpTxvDZdOYCwFYaAaUlSyyeVatpMfzvfyZ6WXPf3_zzJjkiqY0ZiMr38fUa2822-kOHvn3Vu6fmM4T_Ojak9keKrYCJEfhAF5DwZ-2su5por_Y_zXowj09Dl_gFb_u8ydogh_3of-fgKVJ0TiJAm-xrXAVyIyLalp4G7PEOYrCbfwv5t-FPP8ojOAspETSOHBqQAGBt9e6xmIScM" />
+                    <div
+                        class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-slate-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
+                        <img alt="Lori Stevens" class="w-7 h-7 rounded-full border border-white"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2YO9Gg4j73krvWMwHPikkhQ6i8ZSI2KflTvDo47YFhiocrBsDRmILv8IESuI3lNoWMK28wMbp1Jv2Gt3GHaHHyjjeij4GYxw_XSjPHPIz5eDHfw1IwkNT9k7qFxDjNv3JRB06XK6ECU9UfQz5CDl25zN-XeSyiTHA79psd0ywUXFVnHem1FbvZ2QXK6_mU_mpxQK2xm6wsWbzfbcXf7GumgUKbVNQS-KnWoM0l4uxDIAvHvs7q2SbmBYS7wFmuQOQOoTobPpec0wv" />
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Lori Stevens</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 leading-tight group-hover:text-primary transition-colors">Build
+                        Websites With CMS</h3>
+                    <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">video_library</span> 150 Sections</span>
+                        <span class="flex items-center gap-1.5"><span
+                                class="material-symbols-outlined text-base">schedule</span> 5 Days</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-primary">$680.00 USD</span>
+                            <span class="text-sm text-slate-400 line-through">$680.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 flex justify-center">
+            <button
+                class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white font-medium transition-colors">
+                Show more courses
+                <span class="material-symbols-outlined">expand_more</span>
+            </button>
+        </div>
+    </div>
+    <button
+        class="fixed bottom-6 right-6 p-3 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:scale-110 transition-all"
+        onclick="document.documentElement.classList.toggle('dark')">
+        <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+    </button>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink Testimonials</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F6D9C5",
+                        "background-light": "#FDF7F2",
+                        "background-dark": "#1A1614",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#2A2421",
+                        "text-main-light": "#1F2937",
+                        "text-main-dark": "#F3F4F6",
+                        "accent-gold": "#FBBF24"
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .testimonial-scroll {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .testimonial-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-primary selection:bg-black/10">
+    <div class="min-h-screen flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
+        <div
+            class="absolute top-10 left-10 w-12 h-12 rounded-full border-2 border-black bg-white overflow-hidden shadow-sm hidden sm:block">
+            <img alt="Student profile" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuADHu4OE4-TwvVo_yuRPskeTovU-9z0tJ1epuRQJpksedMwh7AiNi4PzrwLvRoAVLrdV1qQW_dQJ_PFpIZmwGx50dfp0rXWn2Aae5Ek53EV_er4RolW_CmKJGWJbVyEBUytjQZXhWm8tgPqcQp63m2QikVmnKDcXD3dD03v_L4Db82HIc-Om7wWA_nEOb-cObQaCV8nYM7-5HSOADjQCxDClVM8uh-i94AcfWAUPyOlt68u2UtzEp5vkebbDHexQTvLXFgLz63mSbIH" />
+        </div>
+        <div
+            class="absolute top-16 right-12 w-10 h-10 rounded-full border-2 border-black bg-white overflow-hidden shadow-sm hidden sm:block">
+            <img alt="Student profile" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr1u3LRtr4QBwT60LuxE2Jpk3SXvOwXStKAH08OHRJobv9_PthO6eNKknc9CF0ePM1nBbJCGWPGyTpfthw0r9fbWFUUSc1XMqWrhOzZkFOyWr6YWjnmSquOljlbV05Ujykug--yxkCpbNHV0xek1c3SmmrYXRu5492KhRFrpYkRQhcONSW18-8qfQZADWCkOnNBZE_-jm8IWtgDa40zjyz3pA5QleEgLuErnHXYyunDGq8r7PWCfPwj-c6PAclPeOTccmpfgREMj6t" />
+        </div>
+        <div
+            class="absolute top-40 left-1/4 w-14 h-14 rounded-full border-2 border-black bg-white overflow-hidden shadow-sm hidden md:block">
+            <img alt="Student profile" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKrMKfvyO_iu5qFkq7tXio4MVT9WtlBsMKNy_z2Elz0gWacm36xInIyy1tYGvzjjagsdseEPyzJCejTsw8AYcp1A8glo7IwZJrRkMxnssRA7-oBDQoDPdvR96eCzg-klYwNwQ0CXecUw3SYOA5mQW9eh-xacRRLGD5MvhBrvXuXQcgQs_Qc0Ffy5NPaAruXVJPs8FxZQ7S-D5MXmXpP7R-3npGUdDA7i0ctdS1U6NQ6BDqVR00_uhAx5vq4Wl9eOOfp835z9oP7Utk" />
+        </div>
+        <div
+            class="absolute top-24 right-1/4 w-12 h-12 rounded-full border-2 border-black bg-white overflow-hidden shadow-sm hidden md:block">
+            <img alt="Student profile" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABdwv1NcWFJhF7CZzE03jZ7J_cZocFfWN-R3VBHbeMby7OZIviwaFfQHI_mtsZgffNFiUv_33v5o2D_MgU94vpv7a9UEW7N6cPKZeK_kVMJg6HP-f2kBxzGLEK68GeSs3jqeGHY7NfbvhjlNKaZIbqP6mhNcfS7ZfKF9IbFABMJ_GbcHQJHsRIEluha6Z5MEdTH5BuAxprS-LB8LgL69L9rhSce2a0UoNlVx0WtiaX2CJ7-Ux6NAXrQ_jM9cXKcC8jWH5dkjgm_JQz" />
+        </div>
+        <div class="max-w-2xl text-center mb-12 z-10">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                What students say about our platform
+            </h1>
+            <p class="text-gray-700 text-sm md:text-base leading-relaxed max-w-lg mx-auto opacity-80">
+                No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do
+                not know.
+            </p>
+        </div>
+        <div
+            class="w-full max-w-7xl px-4 testimonial-scroll overflow-x-auto flex gap-6 pb-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible">
+            <div
+                class="min-w-[300px] flex-shrink-0 bg-white dark:bg-card-dark p-6 rounded-2xl shadow-xl shadow-black/5 flex flex-col h-full border border-white/20">
+                <div class="flex gap-1 mb-4">
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                </div>
+                <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-8 flex-grow">
+                    To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain
+                    some advantage from it.
+                </p>
+                <div class="flex items-center gap-3 mt-auto">
+                    <img alt="Judy Nguyen" class="w-10 h-10 rounded-full bg-blue-100"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy2ey6sRYB2HgwjDtjGzEQB1CHBCFMvTnt16Tpb-HF5SX0FYqJhwE2XUEqtqiJNkuLnYyBaM5GdmYiBL5jK9EfWbNeeEqSiV6aNWL5MBT4Ya3EdFzu1Ug_-CHpMFlPyo5L_y_EbzGKjkOaNgON2p_I-nmdnkOexzVQfbBfW-JeLd9KyZCvZHxx1KSShjVrWZJaUJScxVOC8oclg8_8tqHk3abTPbnJS8RcZEkBe3XVwUzoWyYgUO1qaURM8kMiTL7AF54tmJ77wUf1" />
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Judy Nguyen</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Junior UI designer</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="min-w-[300px] flex-shrink-0 bg-white dark:bg-card-dark p-6 rounded-2xl shadow-xl shadow-black/5 flex flex-col h-full border border-white/20">
+                <div class="flex gap-1 mb-4">
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                </div>
+                <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-8 flex-grow">
+                    Obtain pain of itself, because it is pain, but because occasionally circumstances occur in which.
+                </p>
+                <div class="flex items-center gap-3 mt-auto">
+                    <img alt="Larry Lawson" class="w-10 h-10 rounded-full bg-indigo-100"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDat3w6Dt97Rp-ANowXUJVfrLhRM6Rr0p2KDgl4RAmcU6cPN0tf-b9uFqBQZtWYGIhVu-Ksvlev-WkClJvwsRqv47ZDxZyyjMBsh42Yf6JP4_Z9OfDay10hYSFxy0st6-mA62PfjfEaWBg557JRn69sw7qeSAuNhtMPtDYbvvLXW0jPfX-FpGQyuhan5p5ChPXNqIgIQ8C-p64opwfkyBqCXhmoUETQJue80FRyx13ggZa7iZ8Oca86XsGZz4u7B29RTPWOobNYdGzF" />
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Larry Lawson</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Graduate Teacher</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="min-w-[300px] flex-shrink-0 bg-white dark:bg-card-dark p-6 rounded-2xl shadow-xl shadow-black/5 flex flex-col h-full border border-white/20">
+                <div class="flex gap-1 mb-4">
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                </div>
+                <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-8 flex-grow">
+                    Because those who do not know how to pursue pleasure rationally encounter consequences that are
+                    extremely painful.
+                </p>
+                <div class="flex items-center gap-3 mt-auto">
+                    <img alt="Billy Vasquez" class="w-10 h-10 rounded-full bg-red-100"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2n8sOYZ0PxJaFxI0Wto89fMzfgq1HRvGaXkRyK8_Ur3cItUjGyocyv-aXrMDsq7QzA0AvnJIP021rwUy-LgW2bjwPwZfk72qUT-A9vJpfBXAQPz0jpBJ1p805CUeIw4eHh0Tiy_Fh3omZfmSKfdmvxyyC1ho-L2fCp6rGkk_Bg6HxjOO9xkNCfCH-Vep8HstBBw3j4unn1VjnlhngUypAZeyOPBOC5FqrOG_t2LWprM7jo-1ctbjj6oZ9QRu8woJsS7J_U6JAoGKr" />
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Billy Vasquez</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Post Graduate Teacher</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="min-w-[300px] flex-shrink-0 bg-white dark:bg-card-dark p-6 rounded-2xl shadow-xl shadow-black/5 flex flex-col h-full border border-white/20">
+                <div class="flex gap-1 mb-4">
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                    <span class="material-icons text-accent-gold text-lg">star</span>
+                </div>
+                <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-8 flex-grow">
+                    Occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+                    est laborum.
+                </p>
+                <div class="flex items-center gap-3 mt-auto">
+                    <img alt="Carolyn Ortiz" class="w-10 h-10 rounded-full bg-emerald-100"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAagSEunf-pn7MTpAGByrWPk3v4BMNBMv_QqNp5716MenPEKdtoKFrd18fL1BwnrxznHjmzC1nFfn2qjzZslLIgOlP56o2VCRAtOlXhJf1pNelnb6mGwXw0WuNfdxtrA3I6p8WiqfIU5yXyIDkrVnV7CHAKD7duhXKlMhSHzYSYBxpaRLTjlZAqNCq7HS-Mfe8B4NkYMEsk_prctA2WpGe-z0r5wWsp6NdELd8apIn-KPCinDFIyeciwv9DcYvcqAbYSq6BXekjnINe" />
+                    <div>
+                        <h4 class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Carolyn Ortiz</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Primary Teacher</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-7xl flex justify-end mt-4 px-4">
+            <div class="flex gap-8 items-center">
+                <button
+                    class="group flex items-center gap-2 text-gray-900 dark:text-white transition-all hover:translate-x-[-4px]">
+                    <span class="w-8 h-[1px] bg-gray-900 dark:bg-white group-hover:w-12 transition-all"></span>
+                    <span class="material-icons text-sm scale-x-[-1]">arrow_forward</span>
+                </button>
+                <button
+                    class="group flex items-center gap-2 text-gray-900 dark:text-white transition-all hover:translate-x-[4px]">
+                    <span class="material-icons text-sm">arrow_forward</span>
+                    <span class="w-8 h-[1px] bg-gray-900 dark:bg-white group-hover:w-12 transition-all"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink - How it Works</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1A1A1A",
+                        "background-light": "#FAF6F0",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .curved-text {
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: center;
+            white-space: nowrap;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+            color: #6B7280;
+        }
+
+        .text-arc {
+            position: absolute;
+            left: -40px;
+            top: 20%;
+            height: 60%;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            color: #4B5563;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .step-card-shadow {
+            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display transition-colors duration-300">
+    <div class="min-h-screen flex flex-col items-center justify-center p-6 md:p-12 overflow-x-hidden">
+        <button class="fixed top-4 right-4 p-2 rounded-full bg-white dark:bg-slate-800 shadow-md z-50"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-icons-outlined text-gray-800 dark:text-white">dark_mode</span>
+        </button>
+        <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div class="relative flex justify-center lg:justify-end">
+                <div
+                    class="hidden md:flex flex-col justify-between absolute -left-12 top-1/4 bottom-1/4 text-gray-400 dark:text-gray-500 font-medium text-sm tracking-widest uppercase">
+                    <span>Development</span>
+                    <span>Design</span>
+                    <span>Marketing</span>
+                    <span>Finance</span>
+                </div>
+                <div class="relative w-full max-w-[480px]">
+                    <div
+                        class="aspect-[4/5] rounded-[200px] overflow-hidden bg-gray-200 dark:bg-gray-800 relative z-0 border-[12px] border-white dark:border-slate-800 shadow-2xl">
+                        <img alt="Student learning online" class="w-full h-full object-cover grayscale-[20%]"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxBdoAIHnjQEd1qkV-eQLZmTAeArj3rpA5VKeImPWPsHUkXKjvvZ7WbDJ062_2_-4H-WcXsBZ4iFxQrPI1_x5RfQBY6CrCDDOhZckFACBIwRJyW7474JE_ydxHRpPJbUbPJNJxqluqMNnceK6FgK3_JXm9_mGCQ-BLqrAFsKXWyxq3i_5oO9r2FrNKcWS3F3oEM97sKGGj0-7LsDg4kA2ZzXcXNUsDi_Jc6vTyXocOBVqu67gVErw56RvYDKxh4Fob_7eE4AUFEx9l" />
+                    </div>
+                    <div
+                        class="absolute -top-6 right-0 md:-right-8 bg-white dark:bg-slate-800 p-5 rounded-3xl shadow-xl z-10 w-48 animate-bounce-slow">
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-3">
+                                <span class="material-icons-outlined text-green-500">check_circle</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-gray-900 dark:text-white mb-1">Congrats!!</h4>
+                            <p class="text-[10px] text-gray-500 dark:text-gray-400 leading-tight">Your profile was done
+                                successfully</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-4 md:-left-12 bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-2xl z-20 w-72">
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="bg-green-500 text-white p-1 rounded font-bold text-xs">E</div>
+                            <span class="font-bold text-lg text-gray-900 dark:text-white">EduLink</span>
+                        </div>
+                        <h3 class="text-green-500 font-semibold text-lg mb-2">Online course platform</h3>
+                        <p class="text-[11px] text-gray-500 dark:text-gray-400 mb-5 leading-relaxed">
+                            Departure defective arranging rapturous did believe him all had supported.
+                        </p>
+                        <button
+                            class="w-full bg-primary text-white py-3 rounded-xl font-semibold text-sm hover:bg-opacity-90 transition-all">
+                            Create Account
+                        </button>
+                    </div>
+                    <div class="absolute bottom-1/4 -right-8 opacity-30 dark:opacity-10 pointer-events-none">
+                        <svg fill="none" height="100" viewBox="0 0 100 100" width="100"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle class="text-rose-400" cx="20" cy="20" fill="currentColor" r="2"></circle>
+                            <circle class="text-rose-400" cx="40" cy="20" fill="currentColor" r="2"></circle>
+                            <circle class="text-rose-400" cx="60" cy="20" fill="currentColor" r="2"></circle>
+                            <circle class="text-rose-400" cx="30" cy="40" fill="currentColor" r="2"></circle>
+                            <circle class="text-rose-400" cx="50" cy="40" fill="currentColor" r="2"></circle>
+                            <circle class="text-rose-400" cx="70" cy="40" fill="currentColor" r="2"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 md:pl-12">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                    How it works in 3 simple steps
+                </h2>
+                <div class="space-y-6">
+                    <div
+                        class="bg-indigo-100 dark:bg-indigo-900/20 p-6 md:p-8 rounded-[2rem] step-card-shadow transform transition-transform hover:translate-x-2 md:max-w-[90%] border border-indigo-200/50 dark:border-indigo-500/10">
+                        <div class="flex gap-5">
+                            <div
+                                class="shrink-0 w-12 h-12 bg-white dark:bg-indigo-800 rounded-full flex items-center justify-center shadow-sm">
+                                <span class="material-icons-outlined text-indigo-500 dark:text-indigo-200">search</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Browse our courses</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                    Annoying consequences, or one who avoids a pain that produces no resultant pleasure
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-emerald-100 dark:bg-emerald-900/20 p-6 md:p-8 rounded-[2rem] step-card-shadow transform transition-transform hover:translate-x-2 md:translate-x-8 md:max-w-[90%] border border-emerald-200/50 dark:border-emerald-500/10">
+                        <div class="flex gap-5">
+                            <div
+                                class="shrink-0 w-12 h-12 bg-white dark:bg-emerald-800 rounded-full flex items-center justify-center shadow-sm">
+                                <span
+                                    class="material-icons-outlined text-emerald-500 dark:text-emerald-200">payments</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Purchase quickly and
+                                    securely</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                    Insipidity the sufficient discretion imprudence resolution sir him decisively.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-amber-100 dark:bg-amber-900/20 p-6 md:p-8 rounded-[2rem] step-card-shadow transform transition-transform hover:translate-x-2 md:max-w-[90%] border border-amber-200/50 dark:border-amber-500/10">
+                        <div class="flex gap-5">
+                            <div
+                                class="shrink-0 w-12 h-12 bg-white dark:bg-amber-800 rounded-full flex items-center justify-center shadow-sm">
+                                <span
+                                    class="material-icons-outlined text-amber-500 dark:text-amber-200">play_circle</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Start learning right
+                                    away</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                    Affronting imprudence do he he everything. Sex lasted dinner wanted indeed wished.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 4s ease-in-out infinite;
+        }
+    </style>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink Latest Articles</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1A1A1A",
+                        "background-light": "#FDF8F1",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        "card": "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .card-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(26, 26, 26, 1);
+        }
+
+        .dark .card-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark min-h-screen transition-colors duration-300">
+    <main class="max-w-7xl mx-auto px-4 py-12 md:py-20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-primary dark:text-white tracking-tight">
+                Read our latest articles
+            </h1>
+            <button
+                class="bg-primary dark:bg-zinc-800 text-white px-8 py-3.5 rounded-full font-semibold hover:opacity-90 transition-all w-fit">
+                View all blogs
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6">
+            <div class="relative group">
+                <div class="aspect-[4/3] overflow-hidden rounded-card">
+                    <img alt="Smiling professional man with headphones waving during a video call"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXeWN7iSc65Il0R3vAr0wbu2R2h-DSiH-2Xc29rR7mR7BWnLZn7fiwojLXm7oM13I8fHlj-5xcOaR31RjHss6btnohjAOTTzBD0zWp9ueP1aL4tvuOKM_ItuDz0BNh0wztTTkeadjY3iI4JZVVvCjk3w3VKmKVCn4IdyJ1KVTVcdy3iHnm3FK67mZjq5v2SXVXycu_XzqCvYx-TK-9wryje5jHdV172K6GRrqPMO7m4nQmDJ6vbfdkvYjIHIWhVs-ckR-2rho3SM8M" />
+                </div>
+                <div
+                    class="relative -mt-20 mx-4 bg-white dark:bg-zinc-900 p-6 rounded-card card-shadow border border-gray-100 dark:border-zinc-800">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-primary dark:bg-zinc-700 text-white text-xs font-bold px-4 py-1.5 rounded-full">
+                            Design
+                        </span>
+                        <span class="text-gray-500 dark:text-gray-400 text-sm font-medium">
+                            Dec 26, 2023
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white leading-snug">
+                        Skills that you can learn from business
+                    </h3>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="aspect-[4/3] overflow-hidden rounded-card">
+                    <img alt="Two people holding hands with cardboard boxes on their heads"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfV0AYHgOOl-kFfegUe6gkPd3tSJ7dFLnh36Kg7YgFkjAUboAHk5xcNNCvG0n43-k8EQjYMnOUTmJj6ahktX8IpjtBS0Xj395Uan8eAuQvb0G2vNvlEvIWsfJhUKkRbhcgMZK181nEERNdPAXkiv5CLvsCYvWx0ag9s4tdjeqhGl53N0Lyp1DcT1BDkSx46q_uSZmd-6t17I-FMpVeKKaf7qhik0qQ3fE-CEtg_MNgFHHWsHd3Cx_N2MbIKk55eh0IrYSygjuSXqOY" />
+                </div>
+                <div
+                    class="relative -mt-20 mx-4 bg-white dark:bg-zinc-900 p-6 rounded-card card-shadow border border-gray-100 dark:border-zinc-800">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-primary dark:bg-zinc-700 text-white text-xs font-bold px-4 py-1.5 rounded-full">
+                            Design
+                        </span>
+                        <span class="text-gray-500 dark:text-gray-400 text-sm font-medium">
+                            Dec 26, 2023
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white leading-snug">
+                        Best pinterest boards for learning about
+                    </h3>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="aspect-[4/3] overflow-hidden rounded-card">
+                    <img alt="Person reading an open book closely"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2CXH03ifZxPovQ3ql8jeyd6OiQpyiBplEdYV_fCdwrTZhfQYa1gkOjEBimz40jr5d0oXX7hpCFCgSzDmV-TJtkjs8mgXyRbZRF5S2LizvD7u6Dpb-c5hzmpD-MIJ43OV1z48Is2C-4H6RLSDCqSEY87dWX9F_2pqcmBRhuA4hqoCX5XpAZYDEjclmTz0KfJL_Bh8gicj5v1L697wETjl4nnhCQw_UcPYn48lZYBiHdxQxK7ykz1Eq1JIn_6uDZGD2XsW84eAMc1Ed" />
+                </div>
+                <div
+                    class="relative -mt-20 mx-4 bg-white dark:bg-zinc-900 p-6 rounded-card card-shadow border border-gray-100 dark:border-zinc-800">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-primary dark:bg-zinc-700 text-white text-xs font-bold px-4 py-1.5 rounded-full">
+                            Business
+                        </span>
+                        <span class="text-gray-500 dark:text-gray-400 text-sm font-medium">
+                            Dec 26, 2023
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary dark:text-white leading-snug">
+                        7 common mistakes everyone makes while
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed bottom-6 right-6">
+        <button class="p-4 bg-white dark:bg-zinc-800 rounded-full shadow-lg border border-gray-200 dark:border-zinc-700"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <svg class="w-6 h-6 dark:hidden text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+            <svg class="w-6 h-6 hidden dark:block text-yellow-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                    d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+        </button>
+    </div>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EduLink - Unlock Your Potential</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#82A98D", // The green from the badge
+                        "background-light": "#F7DCC9",
+                        "background-dark": "#1A1A1A",
+                        "footer-dark": "#1F1F1F",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        "large": "2rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 20s linear infinite;
+        }
+
+        .outline-text {
+            -webkit-text-stroke: 1px currentColor;
+            color: transparent;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-sans transition-colors duration-300">
+    <main class="min-h-screen flex flex-col pt-12">
+        <section class="relative px-6 py-16 md:py-24 text-center overflow-hidden">
+            <div class="absolute top-4 left-6 md:left-12">
+                <div class="relative w-24 h-24 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-primary rounded-full opacity-90"></div>
+                    <svg class="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]"
+                        viewBox="0 0 100 100">
+                        <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath">
+                        </path>
+                        <text class="text-[10px] font-bold fill-white tracking-widest uppercase">
+                            <textPath href="#circlePath">Years of Teaching • Years of Teaching • </textPath>
+                        </text>
+                    </svg>
+                    <span class="relative text-white font-bold text-xl">15+</span>
+                </div>
+            </div>
+            <div class="max-w-3xl mx-auto mt-16 md:mt-0">
+                <h1
+                    class="font-display text-4xl md:text-5xl lg:text-6xl text-gray-900 dark:text-white leading-tight mb-6">
+                    Unlock Your Potential with Edulink
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed mb-12 max-w-xl mx-auto">
+                    Explore boundless opportunities for personal and professional growth with Edulink's diverse courses,
+                    tailored to help you reach your goals and passions, today!
+                </p>
+                <div
+                    class="relative max-w-full overflow-hidden border border-gray-900/20 dark:border-white/20 rounded-full py-4 bg-white/10 backdrop-blur-sm">
+                    <div class="animate-scroll whitespace-nowrap flex items-center">
+                        <div class="flex space-x-12 px-6">
+                            <span class="text-2xl font-bold text-gray-800 dark:text-white">Join for Free</span>
+                            <span class="text-2xl font-bold outline-text text-gray-800 dark:text-white">Join for
+                                Free</span>
+                            <span class="text-2xl font-bold text-gray-800 dark:text-white">Join for Free</span>
+                            <span class="text-2xl font-bold outline-text text-gray-800 dark:text-white">Join for
+                                Free</span>
+                        </div>
+                        <div class="flex space-x-12 px-6">
+                            <span class="text-2xl font-bold text-gray-800 dark:text-white">Join for Free</span>
+                            <span class="text-2xl font-bold outline-text text-gray-800 dark:text-white">Join for
+                                Free</span>
+                            <span class="text-2xl font-bold text-gray-800 dark:text-white">Join for Free</span>
+                            <span class="text-2xl font-bold outline-text text-gray-800 dark:text-white">Join for
+                                Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="mt-auto bg-footer-dark text-white rounded-t-[2.5rem] md:rounded-t-[4rem] px-8 py-16 md:px-16">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-12">
+                            <div
+                                class="bg-primary w-10 h-10 rounded flex items-center justify-center text-white font-bold text-xl">
+                                E</div>
+                            <span class="text-2xl font-semibold tracking-tight">duLink</span>
+                        </div>
+                        <div class="flex space-x-4 mb-12">
+                            <a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition-colors"
+                                href="#">
+                                <span class="material-icons text-xl">facebook</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition-colors"
+                                href="#">
+                                <span class="material-icons text-xl">camera_alt</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition-colors"
+                                href="#">
+                                <span class="material-icons text-xl">work</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-900 hover:bg-primary hover:text-white transition-colors"
+                                href="#">
+                                <span class="material-icons text-xl">close</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-400">
+                        Designed by <a class="underline hover:text-white" href="#">Webestica</a>, Powered by <a
+                            class="underline hover:text-white" href="#">Webflow</a>
+                    </div>
+                </div>
+                <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-6">Pages</h4>
+                        <ul class="space-y-4 text-gray-400">
+                            <li><a class="text-white hover:text-primary border-b border-primary pb-1" href="#">Home</a>
+                            </li>
+                            <li><a class="hover:text-white transition-colors" href="#">Home 2</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">About</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-6">CMS page</h4>
+                        <ul class="space-y-4 text-gray-400">
+                            <li><a class="hover:text-white transition-colors" href="#">Courses</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Courses Categories</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Event</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Blog</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Teacher</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="font-bold text-lg mb-6">User page</h4>
+                        <ul class="space-y-4 text-gray-400">
+                            <li><a class="hover:text-white transition-colors" href="#">Style Guide</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Licenses</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Instructions</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Changelog</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Coming Soon</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <button
+        class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform"
+        onclick="document.documentElement.classList.toggle('dark')">
+        <span class="material-icons">dark_mode</span>
+    </button>
+
+</body>
+
+</html>
