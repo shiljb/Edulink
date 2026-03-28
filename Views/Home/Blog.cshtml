@@ -1,0 +1,111 @@
+@{
+    ViewData["Title"] = "Blog";
+}
+
+<style>
+    .blog-hero {
+        text-align: center;
+        padding: 80px 20px 40px;
+    }
+    .blog-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+    .blog-hero p {
+        color: var(--muted);
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+
+    .blog-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .post-card {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .post-image {
+        height: 220px;
+        background: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+    }
+    .post-content {
+        padding: 24px;
+    }
+    .post-meta {
+        font-size: 0.85rem;
+        color: var(--green-btn);
+        font-weight: 600;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .post-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    .post-content p {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    @@media (max-width: 900px) {
+        .blog-container {
+            grid-template-columns: 1fr;
+        }
+        .blog-hero h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+
+<section class="blog-hero">
+    <h1>Our Latest Stories</h1>
+    <p>Insights, tips, and trends from the world of online learning and professional growth.</p>
+</section>
+
+<div class="blog-container">
+    <div class="post-card">
+        <div class="post-image" style="background: #fdf2f2;">📝</div>
+        <div class="post-content">
+            <div class="post-meta">Digital Learning</div>
+            <h3>How to Stay Motivated While Learning Online</h3>
+            <p>Practical tips for managing your time and keeping your focus during long courses.</p>
+        </div>
+    </div>
+    <div class="post-card">
+        <div class="post-image" style="background: #f2fdf2;">🚀</div>
+        <div class="post-content">
+            <div class="post-meta">Career Growth</div>
+            <h3>Top 5 Skills Every Developer Needs in 2024</h3>
+            <p>From AI integration to soft skills, here’s what you should focus on this year.</p>
+        </div>
+    </div>
+    <div class="post-card">
+        <div class="post-image" style="background: #f2f2fd;">🎨</div>
+        <div class="post-content">
+            <div class="post-meta">Design Trends</div>
+            <h3>The Evolution of User Experience in LMS</h3>
+            <p>Exploring how modern design is making education more accessible for everyone.</p>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Programming Hero 2\My Website\EduLink
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Programming Hero 2/My Website/EduLink/Views/Home/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Programming Hero 2/My Website/EduLink/Views/Home/contactus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0dXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

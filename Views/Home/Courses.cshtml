@@ -2,78 +2,420 @@
     ViewData["Title"] = "Courses";
 }
 
-<div class="max-w-7xl mx-auto px-6 py-12">
-    <!-- Categories Section -->
-    <section class="py-12 flex flex-col lg:flex-row gap-12 items-start">
-        <div class="lg:w-1/3 space-y-8">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight font-body">
-                Explore course categories
-            </h2>
-            <div class="flex gap-4">
-                <button class="w-14 h-14 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all active:scale-95">
-                    <span class="material-symbols-rounded">chevron_left</span>
-                </button>
-                <button class="w-14 h-14 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all active:scale-95">
-                    <span class="material-symbols-rounded">chevron_right</span>
-                </button>
-            </div>
-        </div>
-        <div class="lg:w-2/3 w-full overflow-x-auto hide-scrollbar flex gap-6 pb-6">
-            <div class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-[#FBE4D1] dark:bg-orange-900/30 p-8 rounded-[2rem] flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-                <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
-                    <span class="material-symbols-rounded text-gray-900 dark:text-orange-200">hub</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-orange-100">IT & Software</h3>
-            </div>
-            <div class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-[#FFF1AD] dark:bg-yellow-900/30 p-8 rounded-[2rem] flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-                <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
-                    <span class="material-symbols-rounded text-gray-900 dark:text-yellow-200">psychology</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-yellow-100">Personal development</h3>
-            </div>
-            <div class="min-w-[280px] md:min-w-[320px] aspect-[4/5] bg-[#C9DBCF] dark:bg-emerald-900/30 p-8 rounded-[2rem] flex flex-col justify-between group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
-                <div class="w-14 h-14 rounded-full bg-white/40 flex items-center justify-center">
-                    <span class="material-symbols-rounded text-gray-900 dark:text-emerald-200">handshake</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-emerald-100">Business</h3>
-            </div>
-        </div>
-    </section>
+<style>
+  :root {
+    --bg: #f5f0e8;
+    --text: #1a1a1a;
+    --muted: #888;
+    --green: #2d6a4f;
+    --price: #1a1a1a;
+    --old-price: #aaa;
+    --card-radius: 16px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
 
-    <!-- Grid Section -->
-    <div class="mt-24">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white font-body">
-                Browse our courses
-            </h1>
-            <button class="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all flex items-center gap-2">
-                View all courses
-                <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Course Card 1 -->
-            <div class="bg-white dark:bg-gray-800 rounded-[24px] shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-200 dark:border-gray-700">
-                <div class="h-56 bg-[#E1F2E8] dark:bg-emerald-900/30 p-6 relative flex items-center justify-center">
-                    <img alt="Graphic design illustration" class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC-o-X1Z94SIfqkzCzEVRABdzljpAapSZzfdXZ3xOaJ8Juuoxqh9_1mkagxh7Y9P4FJ3d2N42us4hxVgT1jjIQLaqpve7BIC_3SvJqixGY7GP74a3CT4zj1d121zEp710S1KUoBVprkTtdZEM2biSsvfYitePx2TLqejRTDDPq_FlUyQTqPeFiL9ji0Z-XNHPZJb1p2y7yrE8nqz3wX04PX8pUCpMndvcPXm978PBPjLdj3VgOQYxMb4QnUZCdxAmh89lkx-BHPhFK" />
-                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm dark:bg-gray-800/90 rounded-full py-1.5 pl-1.5 pr-4 flex items-center gap-2 shadow-sm">
-                        <img alt="Billy Vasquez" class="w-7 h-7 rounded-full border border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ygrwi1LKAurBNoJjfX9zz6EZ1pPO40_OHn1bDcF7K0n7SlwJmb2SLV9p5gmBQdeBMXjf5vkAee2_iapLvUkHK6837pkUVIBmMwNioq7aPiArvxOKn14jChKsXSftWxtdYObAknHgnwg4H_L9-BvpUBoe2CyNU69FGgtj1TEbbTI7rCfJqqVNcOYHx1VQX_QiYclKryPEHDuJxT6EMcaYVyzTZkIsYaoFt6j77BfIfOQ_pPTGOn_366Q6SmpwZ0wtN0i5-I6PTe0f" />
-                        <span class="text-xs font-semibold">Billy Vasquez</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Graphic Design Masterclass</h3>
-                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-6">
-                        <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">video_library</span> 140 Sections</span>
-                        <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 90 Days</span>
-                    </div>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-xl font-bold text-primary">$450.00 USD</span>
-                    </div>
-                </div>
-            </div>
-            <!-- More cards could go here -->
-        </div>
-    </div>
+  /* ---- header ---- */
+  .courses-header {
+    text-align: center;
+    padding: 64px 24px 40px;
+    position: relative;
+  }
+  .courses-header h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .courses-header p {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* decorative x marks */
+  .deco {
+    position: absolute;
+    top: 30px; left: 60px;
+    pointer-events: none;
+    user-select: none;
+  }
+  .deco span {
+    display: block;
+    font-size: 1.1rem;
+    color: #aaa;
+    line-height: 1.6;
+    letter-spacing: 10px;
+  }
+
+  /* ---- grid ---- */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+  }
+
+  @@media (max-width: 900px) { .grid { grid-template-columns: repeat(2,1fr); } }
+  @@media (max-width: 580px) { .grid { grid-template-columns: 1fr; padding: 0 16px 32px; } }
+
+  /* ---- card ---- */
+  .card {
+    background: #fff;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.13);
+  }
+
+  .card-thumb {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+  }
+  .card-thumb img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  /* colored bg placeholders */
+  .card-thumb .thumb-bg {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+  }
+
+  .instructor {
+    position: absolute;
+    top: 14px; right: 14px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 5px 12px 5px 5px;
+    display: flex; align-items: center; gap: 7px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .instructor-avatar {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ddd;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #555;
+    overflow: hidden;
+  }
+
+  .card-body { padding: 18px 20px 20px; }
+  .card-body h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .meta {
+    display: flex; gap: 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .meta span { display: flex; align-items: center; gap: 4px; }
+
+  .price { display: flex; align-items: center; gap: 10px; }
+  .price .now {
+    font-weight: 700;
+    color: var(--green);
+  }
+  .price .was {
+    font-size: 0.82rem;
+    color: var(--old-price);
+    text-decoration: line-through;
+  }
+
+  /* ---- pagination ---- */
+  .pagination {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 8px 40px 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  @@media(max-width:580px){.pagination{padding:8px 16px 48px;}}
+
+  .page-info {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin-right: auto;
+  }
+
+  .btn-page {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 6px;
+    transition: background .2s;
+  }
+  .btn-page:hover { background: #333; }
+
+  /* thumb color themes */
+  .t-mint   { background: #c8f0d8; }
+  .t-orange { background: #fde4b0; }
+  .t-pink   { background: #fdd4d4; }
+  .t-indigo { background: #d4d8f8; }
+  .t-lavender{ background: #e6d4f8; }
+  .t-yellow { background: #fde68a; }
+  .t-blue   { background: #bfdbfe; }
+  .t-teal   { background: #99f6e4; }
+  .t-salmon { background: #fca5a5; }
+  .t-peach  { background: #fdba74; }
+  .t-slate  { background: #cbd5e1; }
+  .t-rose   { background: #fecdd3; }
+</style>
+
+<div class="courses-header">
+  <div class="deco">
+    <span>×  × ×</span>
+    <span>  ×   ×</span>
+    <span>×   ×</span>
+    <span>  ×</span>
+  </div>
+  <h1>Browse our courses</h1>
+  <p>Also it great have set behold land third he great years midst.</p>
 </div>
+
+<!-- PAGE 1 -->
+<div class="section active" id="page-1">
+  <div class="grid">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-mint">🎬</div>
+        <div class="instructor">
+          <div class="instructor-avatar">BV</div>
+          Billy Vasquez
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>Graphic Design Masterclass</h3>
+        <div class="meta">
+          <span>140 Sections</span>
+          <span>90 Days</span>
+          <span>40 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$450.00 USD</span>
+          <span class="was">$530.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-orange">💎</div>
+        <div class="instructor">
+          <div class="instructor-avatar">DB</div>
+          Dennis Barrett
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>Sketch From A to Z: For App Designer</h3>
+        <div class="meta">
+          <span>80 Sections</span>
+          <span>40 Days</span>
+          <span>10 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$750.00 USD</span>
+          <span class="was">$820.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-pink">🤖</div>
+        <div class="instructor">
+          <div class="instructor-avatar">JM</div>
+          Jacqueline Miller
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>The Complete Web Development in Python</h3>
+        <div class="meta">
+          <span>100 Sections</span>
+          <span>50 Days</span>
+          <span>30 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$450.00 USD</span>
+          <span class="was">$520.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-indigo">🅱️</div>
+        <div class="instructor">
+          <div class="instructor-avatar">JW</div>
+          Joan Wallace
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>Bootstrap 5 From Scratch</h3>
+        <div class="meta">
+          <span>150 Sections</span>
+          <span>5 Days</span>
+          <span>15 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$230.00 USD</span>
+          <span class="was">$360.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-lavender">🌐</div>
+        <div class="instructor">
+          <div class="instructor-avatar">JN</div>
+          Judy Nguyen
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>Figma to Webflow: Full course</h3>
+        <div class="meta">
+          <span>150 Sections</span>
+          <span>5 Days</span>
+          <span>15 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$800.00 USD</span>
+          <span class="was">$920.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-rose">🖥️</div>
+        <div class="instructor">
+          <div class="instructor-avatar">LS</div>
+          Lori Stevens
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>Build Websites With CMS</h3>
+        <div class="meta">
+          <span>150 Sections</span>
+          <span>5 Days</span>
+          <span>15 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$680.00 USD</span>
+          <span class="was">$820.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pagination">
+    <span class="page-info">1 / 2</span>
+    <button class="btn-page" onclick="goPage(2)">Next ›</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="section" id="page-2">
+  <div class="grid">
+
+    <!-- Card 7 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-yellow">🎨</div>
+        <div class="instructor">
+          <div class="instructor-avatar">LC</div>
+          Louis Crawford
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>Figma Caster Class Design</h3>
+        <div class="meta">
+          <span>14 Sections</span>
+          <span>4 Hours</span>
+          <span>656 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$240.00 USD</span>
+          <span class="was">$260.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <div class="card-thumb">
+        <div class="thumb-bg t-slate">🖼️</div>
+        <div class="instructor">
+          <div class="instructor-avatar">SB</div>
+          Samuel Bishop
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>Adobe Photoshop Ultimate Guide</h3>
+        <div class="meta">
+          <span>13 Sections</span>
+          <span>6 Hours</span>
+          <span>1224 Students</span>
+        </div>
+        <div class="price">
+          <span class="now">$300.00 USD</span>
+          <span class="was">$400.00 USD</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pagination">
+    <button class="btn-page" onclick="goPage(1)">‹ Previous</button>
+    <span class="page-info" style="margin-right:0;margin-left:auto;">2 / 2</span>
+  </div>
+</div>
+
+<script>
+  function goPage(n) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById('page-' + n).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
